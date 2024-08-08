@@ -42,6 +42,7 @@ class vector_storage:
                  
         return None
 
+<<<<<<< Updated upstream
     def rename_vec(self, name, new_name):
         vec_entry = self.get_vec(name)
 
@@ -51,6 +52,8 @@ class vector_storage:
         
         return False
 
+=======
+>>>>>>> Stashed changes
     def delete_vec(self, name):
         vec_entry = self.get_vec(name)
 
@@ -213,6 +216,7 @@ class vector:
             print("What do you want to know about this vector? Choose the numbers below:")
             print("+-----------------------------------------+")
             print("1- Display vector")
+<<<<<<< Updated upstream
             print("2- Rename vector")
             print("3- Search element")
             print("4- Insert element")
@@ -229,6 +233,23 @@ class vector:
             print("15- Standard deviation")
             print("16- Delete vector")
             print("17- Add another vector")
+=======
+            print("2- Search element")
+            print("3- Insert element")
+            print("4- Delete element")
+            print("5- Sum of the elements")
+            print("6- Quantity of elements")
+            print("7- Sort vector")
+            print("8- Arithmetic mean")
+            print("9- Median")
+            print("10- Mode")
+            print("11- Amplitude")
+            print("12- Variance")
+            print("13- Mean deviation")
+            print("14- Standard deviation")
+            print("15- Delete vector")
+            print("16- Add another vector")
+>>>>>>> Stashed changes
             print("+-----------------------------------------+")
             print()
 
@@ -241,12 +262,17 @@ class vector:
                     print("Empty vector.")
                 else:
                     print(display_vector)
+<<<<<<< Updated upstream
 
             elif choice == 2: # Rename vector
                 new_name = str(input("New name for the vector: "))
                 storage.rename_vec(self.name, new_name)
             
             elif choice == 3: # Search element
+=======
+            
+            elif choice == 2: # Search element
+>>>>>>> Stashed changes
                 while True:
                     num = float(input("Which number to search? "))
                     position = self.binary_search(num)
@@ -261,7 +287,11 @@ class vector:
                     if answer == 'n':
                         break
             
+<<<<<<< Updated upstream
             elif choice == 4: # Insert element
+=======
+            elif choice == 3: # Insert element
+>>>>>>> Stashed changes
                 while True:
                     num = float(input("Which number to insert? "))
                     insert = self.insert(num)
@@ -277,7 +307,11 @@ class vector:
                     if answer == 'n':
                         break
             
+<<<<<<< Updated upstream
             elif choice == 5: # Delete element
+=======
+            elif choice == 4: # Delete element
+>>>>>>> Stashed changes
                 while True:
                     num = float(input("Which number to delete? "))
                     delete = self.delete(num)
@@ -292,6 +326,7 @@ class vector:
                     if answer == 'n':
                         break
             
+<<<<<<< Updated upstream
             elif choice == 6: # Sum of the elements
                 print(sum(self.values))
             
@@ -305,10 +340,26 @@ class vector:
                 print(self.arit_mean())
             
             elif choice == 10: # Median
+=======
+            elif choice == 5: # Sum of the elements
+                print(sum(self.values))
+            
+            elif choice == 6: # Quantity of elements
+                print(self.count)
+            
+            elif choice == 7: # Sort vector
+                print(self.merge_sort(self.values))
+            
+            elif choice == 8: # Arithmetic mean
+                print(self.arit_mean())
+            
+            elif choice == 9: # Median
+>>>>>>> Stashed changes
                 self.merge_sort(self.values)
                 median = len(self.values) // 2
                 print(self.values[median])
 
+<<<<<<< Updated upstream
             elif choice == 11: # Mode
                 print(self.find_mode(self.values))
 
@@ -319,6 +370,18 @@ class vector:
                 print(self.variance())
 
             elif choice == 14: # Mean deviation
+=======
+            elif choice == 10: # Mode
+                print(self.find_mode(self.values))
+
+            elif choice == 11: # Amplitude
+                print(max(self.values) - min(self.values))
+
+            elif choice == 12: # Variance
+                print(self.variance())
+
+            elif choice == 13: # Mean deviation
+>>>>>>> Stashed changes
                 mean_deviation = self.variance()
                 
                 if mean_deviation < 0:
@@ -326,6 +389,7 @@ class vector:
                 else:
                     print(mean_deviation)
 
+<<<<<<< Updated upstream
             elif choice == 15: # Standard deviation
                 print(math.sqrt(self.variance()))
 
@@ -334,6 +398,16 @@ class vector:
                 break
 
             elif choice == 17: # Add another vector
+=======
+            elif choice == 14: # Standard deviation
+                print(math.sqrt(self.variance()))
+
+            elif choice == 15: # Delete vector
+                storage.delete_vec(self.name)
+                break
+
+            elif choice == 16: # Add another vector
+>>>>>>> Stashed changes
                 break
 
             else:
